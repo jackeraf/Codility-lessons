@@ -1,4 +1,4 @@
-// First solution using a hashmap
+// First 66% solution using a hashmap
 // time O(N)
 
 // function solution(arr) {
