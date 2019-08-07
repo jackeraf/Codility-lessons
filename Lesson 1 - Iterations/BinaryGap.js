@@ -1,3 +1,5 @@
+// time O(n) space 0 (1)
+
 function solution(n) {
   let binary = (n >>> 0).toString(2);
   let max = -Infinity;
