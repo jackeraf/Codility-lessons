@@ -22,11 +22,9 @@ function solution(arr) {
   if (arr.length === 1 && arr[0] > 1) return 0;
   if (arr.length === 1 && arr[0] === 1) return 1;
   let max = -Infinity;
-  let counter = 0;
 
   for (let i = 0; i < arr.length; i++) {
     max = Math.max(arr[i], max);
-    counter++;
   }
-  return counter === max ? 1 : 0;
+  return arr.length === max ? 1 : 0;
 }
