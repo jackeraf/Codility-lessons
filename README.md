@@ -1,0 +1,1 @@
+### Solutions to codility lessons in JS
