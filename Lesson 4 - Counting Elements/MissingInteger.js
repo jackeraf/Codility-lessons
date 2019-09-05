@@ -16,21 +16,23 @@
 
 // solution( [-1, -3]);
 
+//  time O(2n) space O(n)
 
-//  time O(n) space O(n)
+function solution(arr) {
+  let seen = new Array(arr.length);
 
-function solution(arr){
-    let checkNums = new Array(arr.length);
-    let remainingNum = 0;
-    for(let i = 0; i < arr.length; i++){
-      const num = arr[i];
-      if(checkNums[num] == undefined && num > 0){
-        checkNums[num] = num;
-        remainingNum++;
-      }
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    if (0 < num <= arr.length) {
+      seen[num - 1] = true;
     }
-    if(remainingNum === 0) return 1;
-    return remainingNum === arr.length ? remainingNum +1 : remainingNum;
+  }
+  for (let i = 0; i < seen.length; i++) {
+    if (seen[i] === undefined) {
+      return i + 1;
+    }
+  }
+  return arr.length + 1;
 }
 
 solution([1, 3, 6, 4, 1, 2]);
