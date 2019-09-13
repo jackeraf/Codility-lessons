@@ -1,3 +1,6 @@
+// Time 0(n * log(n))
+// space O(1)
+
 function solution(arr) {
   if (arr.length < 3) return 0;
   arr.sort((a, b) => a - b);
